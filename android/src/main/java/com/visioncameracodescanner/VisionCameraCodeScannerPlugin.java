@@ -174,7 +174,7 @@ public class VisionCameraCodeScannerPlugin extends FrameProcessorPlugin {
       WritableNativeMap writeableMap = new WritableNativeMap();
       map.putInt("height",image.getHeight());
       map.putInt("width",image.getWidth());
-      map.putArray("image", writeableMap);
+      map.putMap("image", writeableMap);
     }
 
     String displayValue = barcode.getDisplayValue();
