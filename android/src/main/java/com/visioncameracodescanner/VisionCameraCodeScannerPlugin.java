@@ -66,7 +66,7 @@ public class VisionCameraCodeScannerPlugin extends FrameProcessorPlugin {
 
         WritableNativeArray array = new WritableNativeArray();
         for (Barcode barcode : barcodes) {
-          array.pushMap(convertBarcode(barcode));
+          array.pushMap(convertBarcode(barcode,image));
         }
         return array;
       } catch (Exception e) {
@@ -157,7 +157,7 @@ public class VisionCameraCodeScannerPlugin extends FrameProcessorPlugin {
     return map;
   }
 
-  private WritableNativeMap convertBarcode(@NonNull Barcode barcode) {
+  private WritableNativeMap convertBarcode(@NonNull Barcode barcode,InputImage image) {
     WritableNativeMap map = new WritableNativeMap();
 
     Rect boundingBox = barcode.getBoundingBox();
@@ -168,6 +168,13 @@ public class VisionCameraCodeScannerPlugin extends FrameProcessorPlugin {
     Point[] cornerPoints = barcode.getCornerPoints();
     if (cornerPoints != null) {
       map.putArray("cornerPoints", convertToArray(cornerPoints));
+    }
+
+    if (image != null) {
+      WritableNativeMap writeableMap = new WritableNativeMap();
+      map.putInt("height",image.getHeight());
+      map.putInt("width",image.getWidth());
+      map.putArray("image", writeableMap);
     }
 
     String displayValue = barcode.getDisplayValue();

@@ -228,6 +228,10 @@ export interface Point {
   y: number;
 }
 
+export interface ImageDimensions {
+  height: number;
+  width: number;
+}
 /**
  * @see https://developers.google.com/android/reference/com/google/mlkit/vision/barcode/Barcode
  */
@@ -236,51 +240,52 @@ export type Barcode = {
   cornerPoints?: Point[];
   displayValue?: string;
   rawValue?: string;
+  image?: ImageDimensions;
   format: BarcodeFormat;
   content:
-    | {
-        type:
-          | BarcodeValueType.UNKNOWN
-          | BarcodeValueType.ISBN
-          | BarcodeValueType.TEXT;
-        data: string;
-      }
-    | {
-        type: BarcodeValueType.CONTACT_INFO;
-        data: ContactInfo;
-      }
-    | {
-        type: BarcodeValueType.EMAIL;
-        data: Email;
-      }
-    | {
-        type: BarcodeValueType.PHONE;
-        data: Phone;
-      }
-    | {
-        type: BarcodeValueType.SMS;
-        data: Sms;
-      }
-    | {
-        type: BarcodeValueType.URL;
-        data: UrlBookmark;
-      }
-    | {
-        type: BarcodeValueType.WIFI;
-        data: Wifi;
-      }
-    | {
-        type: BarcodeValueType.GEO;
-        data: GeoPoint;
-      }
-    | {
-        type: BarcodeValueType.CALENDAR_EVENT;
-        data: CalendarEvent;
-      }
-    | {
-        type: BarcodeValueType.DRIVER_LICENSE;
-        data: DriverLicense;
-      };
+  | {
+    type:
+    | BarcodeValueType.UNKNOWN
+    | BarcodeValueType.ISBN
+    | BarcodeValueType.TEXT;
+    data: string;
+  }
+  | {
+    type: BarcodeValueType.CONTACT_INFO;
+    data: ContactInfo;
+  }
+  | {
+    type: BarcodeValueType.EMAIL;
+    data: Email;
+  }
+  | {
+    type: BarcodeValueType.PHONE;
+    data: Phone;
+  }
+  | {
+    type: BarcodeValueType.SMS;
+    data: Sms;
+  }
+  | {
+    type: BarcodeValueType.URL;
+    data: UrlBookmark;
+  }
+  | {
+    type: BarcodeValueType.WIFI;
+    data: Wifi;
+  }
+  | {
+    type: BarcodeValueType.GEO;
+    data: GeoPoint;
+  }
+  | {
+    type: BarcodeValueType.CALENDAR_EVENT;
+    data: CalendarEvent;
+  }
+  | {
+    type: BarcodeValueType.DRIVER_LICENSE;
+    data: DriverLicense;
+  };
 };
 
 /**
