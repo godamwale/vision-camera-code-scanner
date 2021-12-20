@@ -172,8 +172,19 @@ public class VisionCameraCodeScannerPlugin extends FrameProcessorPlugin {
 
     if (image != null) {
       WritableNativeMap writeableMap = new WritableNativeMap();
-      map.putInt("height",image.getHeight());
-      map.putInt("width",image.getWidth());
+      writeableMap.putInt("imageHeight",image.getHeight());
+      writeableMap.putInt("imageWidth",image.getWidth());
+      Double offsetX =  (boundingBox.exactCenterX() - ceil(boundingBox.width())) / 2.0f;
+      Double offsetY =  (boundingBox.exactCenterY() - ceil(boundingBox.height())) / 2.0f;
+      Double x = boundingBox.right + offsetX;
+      Double y = boundingBox.top + offsetY;
+
+
+
+      writeableMap.putDouble("x", boundingBox.centerX() + (boundingBox.centerX() - x));
+      writeableMap.putDouble("y", boundingBox.centerY() + (y - boundingBox.centerY()));
+      writeableMap.putDouble("width", boundingBox.width());
+      writeableMap.putDouble("height", boundingBox.height());
       map.putMap("image", writeableMap);
     }
 
