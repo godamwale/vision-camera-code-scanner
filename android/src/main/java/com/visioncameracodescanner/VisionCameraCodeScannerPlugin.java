@@ -2,6 +2,7 @@ package com.visioncameracodescanner;
 
 import static com.visioncameracodescanner.BarcodeConverter.convertToArray;
 import static com.visioncameracodescanner.BarcodeConverter.convertToMap;
+import static java.lang.Math.ceil;
 
 import android.annotation.SuppressLint;
 import android.graphics.Point;
