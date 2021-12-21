@@ -7393,6 +7393,10 @@ react-native-screens@^3.4.0:
     react-freeze "^1.0.0"
     warn-once "^0.1.0"
 
+react-native-vision-camera-gw@2.10.3:
+  version "2.10.3"
+  resolved "https://registry.yarnpkg.com/react-native-vision-camera-gw/-/react-native-vision-camera-gw-2.10.3.tgz#b9d44324d02ca5bd9201003f4f4761d07f0b5eea"
+  integrity sha512-zKJIYH/k+crtOZlnuEi3bAVCUmDJTshyfoIaTgzV9maXrAlS5AS+LVW44XZMA5joLm2+D4ANZMIMk8OjDHzPAw==
 
 react-native@0.65.1:
   version "0.65.1"
