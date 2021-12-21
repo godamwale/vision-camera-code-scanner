@@ -35,8 +35,8 @@ Simply call the `useScanBarcodes()` hook or call `scanBarcodes()` inside of the 
 import * as React from 'react';
 
 import { StyleSheet, Text } from 'react-native';
-import { useCameraDevices } from 'react-native-vision-camera';
-import { Camera } from 'react-native-vision-camera';
+import { useCameraDevices } from 'react-native-vision-camera-gw';
+import { Camera } from 'react-native-vision-camera-gw';
 import { useScanBarcodes, BarcodeFormat } from 'vision-camera-code-scanner';
 
 export default function App() {

@@ -1,6 +1,6 @@
 {
   "name": "vision-camera-code-scanner-gw",
-  "version": "0.1.14",
+  "version": "0.1.13",
   "description": "VisionCamera Frame Processor Plugin to read barcodes using MLKit Vision Barcode Scanning",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
@@ -72,7 +72,7 @@
   "peerDependencies": {
     "react": "*",
     "react-native": "*",
-    "react-native-vision-camera": ">=2.9.4"
+    "react-native-vision-camera-gw": ">=2.9.4"
   },
   "jest": {
     "preset": "react-native",
