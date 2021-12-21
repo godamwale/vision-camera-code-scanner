@@ -1,4 +1,4 @@
-import type { Frame } from 'react-native-vision-camera';
+import type { Frame } from 'react-native-vision-camera-gw';
 
 /**
  * @see https://developers.google.com/android/reference/com/google/mlkit/vision/barcode/Barcode.BarcodeFormat

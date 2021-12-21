@@ -1,4 +1,4 @@
-import { Frame, useFrameProcessor } from 'react-native-vision-camera';
+import { Frame, useFrameProcessor } from 'react-native-vision-camera-gw';
 import { useState } from 'react';
 import { runOnJS } from 'react-native-reanimated';
 

@@ -55,7 +55,7 @@ repositories {
 dependencies {
     //noinspection GradleDynamicVersion
     implementation "com.facebook.react:react-native:+"  // From node_modules
-    api project(":react-native-vision-camera")
+    api project(":react-native-vision-camera-gw")
     implementation "androidx.camera:camera-core:1.1.0-alpha06"
     implementation 'com.google.mlkit:barcode-scanning:17.0.0'
 }
