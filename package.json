@@ -48,7 +48,7 @@
   },
   "devDependencies": {
     "react-native-reanimated": "2.3.0-beta.4",
-    "react-native-vision-camera-gw": "2.10.3",
+    "react-native-vision-camera-gw": "2.10.6",
     "@commitlint/config-conventional": "^11.0.0",
     "@react-native-community/eslint-config": "^2.0.0",
     "@release-it/conventional-changelog": "^2.0.0",
